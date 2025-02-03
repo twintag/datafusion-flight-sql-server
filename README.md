@@ -41,12 +41,8 @@ async {
 This example sets up a Flight SQL server listening on `127.0.0.1:50051`.
 
 
-# Acknowledgments
+## Acknowledgments
 
 This repository was a Rust crate that was first built as a part of
 [datafusion-federation](https://github.com/datafusion-contrib/datafusion-federation/)
 repository. 
-
-For more details about the original repository, please visit
-[datafusion-federation](https://github.com/datafusion-contrib/datafusion-federation/).
-
