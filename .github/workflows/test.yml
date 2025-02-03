@@ -70,4 +70,4 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - run: cargo build --all 
-      - run: cargo package -p datafusion-federation --allow-dirty
+      - run: cargo package -p datafusion-flight-sql-server --allow-dirty
