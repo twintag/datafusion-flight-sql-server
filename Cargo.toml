@@ -19,8 +19,12 @@ arrow-flight = { version = "56", features = ["flight-sql"] }
 arrow-json = "56"
 async-trait = "0.1.88"
 datafusion = "50"
-datafusion-federation = { version = "0.4.10" }
+datafusion-federation = { version = "0.4" }
 datafusion-substrait = "50"
 futures = "0.3.31"
 tokio = { version = "1.47", features = ["full"] }
 tonic = { version = "0.13", features = ["transport", "codegen", "prost"] }
+
+[patch.crates-io]
+datafusion = { version = "50", git = "https://github.com/twintag/datafusion", branch = "twintag" }
+datafusion-substrait = { version = "50", git = "https://github.com/twintag/datafusion", branch = "twintag" }
