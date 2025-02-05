@@ -29,3 +29,7 @@ tonic = { version = "0.12", features = [
     "tls",
     "prost",
 ] }
+
+[patch.crates-io]
+datafusion = { version = "49.0.0", git = "https://github.com/twintag/datafusion", branch = "twintag" }
+datafusion-substrait = { version = "49.0.0", git = "https://github.com/twintag/datafusion", branch = "twintag" }
