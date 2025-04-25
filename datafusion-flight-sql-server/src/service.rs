@@ -1072,7 +1072,7 @@ fn df_error_to_status(err: DataFusionError) -> Status {
 }
 
 fn status_to_flight_error(status: Status) -> FlightError {
-    FlightError::Tonic(status)
+    FlightError::Tonic(Box::new(status))
 }
 
 async fn decode_schema(decoder: &mut FlightDataDecoder) -> Result<SchemaRef, Status> {
