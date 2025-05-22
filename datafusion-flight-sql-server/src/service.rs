@@ -882,7 +882,7 @@ impl ArrowFlightSqlService for FlightSqlService {
             .map_err(df_error_to_status)?;
 
         let dataset_schema = get_schema_for_plan(&plan);
-        let parameter_schema = parameter_schema_for_plan(&plan)?;
+        let parameter_schema = parameter_schema_for_plan(&plan).map_err(|e| e.as_ref().clone())?;
 
         let dataset_schema =
             encode_schema(dataset_schema.as_ref()).map_err(arrow_error_to_status)?;
@@ -1037,7 +1037,7 @@ fn get_schema_for_plan(logical_plan: &LogicalPlan) -> SchemaRef {
         .expect("flight data schema should be known when explicitly provided via `with_schema`")
 }
 
-fn parameter_schema_for_plan(plan: &LogicalPlan) -> Result<SchemaRef, Status> {
+fn parameter_schema_for_plan(plan: &LogicalPlan) -> Result<SchemaRef, Box<Status>> {
     let parameters = plan
         .get_parameter_types()
         .map_err(df_error_to_status)?
