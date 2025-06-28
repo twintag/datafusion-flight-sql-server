@@ -909,10 +909,7 @@ impl ArrowFlightSqlService for FlightSqlService {
 
         let handle = query.prepared_statement_handle.as_ref();
         if let Ok(handle) = std::str::from_utf8(handle) {
-            info!(
-                "do_action_close_prepared_statement with handle {:?}",
-                handle
-            );
+            info!("do_action_close_prepared_statement with handle {handle:?}",);
 
             // NOP since stateless
         }
