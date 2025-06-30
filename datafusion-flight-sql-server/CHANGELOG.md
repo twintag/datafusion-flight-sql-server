@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.10](https://github.com/datafusion-contrib/datafusion-flight-sql-server/compare/v0.4.9...v0.4.10) - 2025-06-30
+
+### Other
+
+- Merge pull request #25 from datafusion-contrib/upgrade_deps
+- Upgrade Dependences
+
 ## [0.4.9](https://github.com/datafusion-contrib/datafusion-flight-sql-server/compare/v0.4.8...v0.4.9) - 2025-05-22
 
 ### Other
