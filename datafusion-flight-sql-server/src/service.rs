@@ -87,10 +87,7 @@ impl FlightSqlService {
 
     /// Replaces the FlightSqlServiceConfig with the provided config.
     pub fn with_config(self, config: FlightSqlServiceConfig) -> Self {
-        Self {
-            config,
-            ..self
-        }
+        Self { config, ..self }
     }
 
     /// Replaces the sql_options with the provided options.
