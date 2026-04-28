@@ -17,9 +17,13 @@ repository = "https://github.com/datafusion-contrib/datafusion-flight-sql-server
 arrow-flight = { version = "58.0", features = ["flight-sql"] }
 async-trait = "0.1"
 datafusion = "53.0"
-datafusion-federation = { version = "0.5.2" }
+datafusion-federation = { version = "0.5.3" }
 datafusion-substrait = "53.0"
 futures = "0.3"
 tokio = { version = "1.47", features = ["full"] }
 tonic = { version = "0.14", features = ["transport", "codegen"] }
 prost = "0.14"
+
+[patch.crates-io]
+datafusion = { version = "53", git = "https://github.com/twintag/datafusion", branch = "twintag-df53" }
+datafusion-federation = { version = "0.5", git = "https://github.com/twintag/datafusion-federation", branch = "twintag-df53" }
