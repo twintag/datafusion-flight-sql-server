@@ -23,3 +23,9 @@ futures = "0.3"
 tokio = { version = "1.47", features = ["full"] }
 tonic = { version = "0.14", features = ["transport", "codegen"] }
 prost = "0.14"
+
+
+[patch.crates-io]
+datafusion = { version = "54", git = "https://github.com/twintag/datafusion", branch = "twintag-df54" }
+datafusion-federation = { version = "0.5", git = "https://github.com/twintag/datafusion-federation", branch = "twintag-df54" }
+
